@@ -1,0 +1,130 @@
+/* START HEADER */
+header {
+    width: 100%;
+    height: 6.5rem;
+    background-color: var(--accent-color);
+    padding: 1rem;
+}
+.title {
+    display: flex;
+    justify-self: center;
+}
+
+#logo {
+    height: 3.125rem;
+    width: auto;
+    margin-right: 1.25rem;
+}
+/* END HEADER */
+
+
+/* START ASIDE */
+.navigation {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: var(--bg-color-dark);
+}
+.quick-access, .project {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+
+.new-project-div {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0.625rem;
+    text-align: center;
+}
+
+#new-project-name {
+    width: 100%;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    margin-bottom: 0.625rem;
+    border: none;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.new-project-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add, .cancel {
+    width: 45%;
+    height: auto;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(235, 182, 172);
+}
+
+.add:hover, .cancel:hover {
+    text-decoration: underline;
+}
+
+.add {
+    background-color: rgb(159, 214, 159);
+}
+
+
+#new-project {
+    margin: 0.625rem 0 0 0.125rem;
+}
+/* END ASIDE */
+
+
+/* START LIST SECTION */
+.list {
+    width: 60%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.list-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-title h1 {
+    font-size: 2rem;
+}
+
+#delete-list {
+    display: none;
+    text-align: center;
+}
+
+/* START LIST SECTION */
+
+
+/* START FOOTER */
+footer {
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 3rem;
+    background-color: var(--accent-color);
+}
+
+.credits {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+/* END FOOTER */
