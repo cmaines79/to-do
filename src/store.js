@@ -1,4 +1,5 @@
 import Project from "./project.js"
+import ToDo from "./todo.js"
 
 export default class Store {
     static getProjectCount() {
@@ -38,4 +39,45 @@ export default class Store {
     static setProjectList(projectList) {
         localStorage.projectList = JSON.stringify(projectList);
     }
+
+    static getTaskList() {
+        if(localStorage.getItem('taskList') === null) {
+            // create a new taskList based upon default data
+            var taskList = ToDo.addDefaultTask();
+
+            // store list in localStorage
+            this.setTaskList(taskList);
+
+            // also need to increment task Count since we are creating a new task
+            localStorage.taskCount = parseInt(localStorage.taskCount) + 1;
+        
+        } else {
+            taskList = JSON.parse(localStorage.taskList);
+            // ADD SORTING BY DUE DATE?
+            // ADD SORTING BY IMPORTANCE?
+            // ADD SORTING BY ALPHABETICAL?
+            // ADD SORTING BY?
+        }
+        return taskList;
+    }
+
+    static setTaskList(taskList) {
+        localStorage.taskList = JSON.stringify(taskList);
+    }
+
+    static getTaskCount() {
+        let taskCount;
+        if (localStorage.getItem('taskCount') === null) {
+            // create a new taskCount object
+            taskCount = 1;
+            this.setTaskCount(taskCount);
+        } else {
+            taskCount = localStorage.taskCount;
+        }
+        return taskCount;
+    }
+
+    static setTaskCount(count) {
+        localStorage.taskCount = count;
+    }    
 }

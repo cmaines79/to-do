@@ -109,7 +109,86 @@ textarea:focus, input:focus {
     text-align: center;
 }
 
-/* START LIST SECTION */
+.new-task-div {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0.625rem;
+    text-align: center;
+}
+
+#new-task-name {
+    width: 100%;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    margin-bottom: 0.625rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.new-task-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#new-task {
+    display: none;
+}
+
+#task-results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#task-results button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--secondary-color);
+    margin: 2px 0;
+    background-color: rgb(237, 233, 233);
+}
+
+.res1, .res2 {
+    display: flex;
+}
+
+#task-results button input[type=radio] {
+    margin-right: 5px;
+}
+
+.input-date {
+    display: flex;
+    margin-right: 5px;
+}
+
+.input-date-hidden {
+    display: none;
+}
+
+.no-date {
+    display: flex;
+    margin-right: 5px;
+}
+
+.no-date-hidden {
+    display: none;
+}
+
+#task-results button a {
+    text-decoration: none;    
+}
+
+/* END LIST SECTION */
 
 
 /* START FOOTER */

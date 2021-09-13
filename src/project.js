@@ -11,7 +11,6 @@ export default class Project {
         // add new project to the array
         var project = new Project('project1', 'Sample Project');
         var projectList = [];
-        // var projectCount = localStorage.projectCount;
         projectList.push(project);
 
         return projectList;
@@ -33,7 +32,7 @@ export default class Project {
         // CREATE FOUCS ON THE NEWLY CREATED PROJECT!!!!
         // CREATE FOUCS ON THE NEWLY CREATED PROJECT!!!!
 
-        // udate localStorage variables
+        // update localStorage variables
         Store.setProjectList(projectList);
         localStorage.projectCount = parseInt(localStorage.projectCount) + 1;
 
@@ -86,13 +85,15 @@ export default class Project {
             switch(target.id) {
                 case 'new-project':
                     DOM.newProjectDivDispaly('show');
-                    DOM.focusOnInput();
+                    DOM.focusOnInput('new-project-name');
                     break;
                 case 'cancel-btn':
                     DOM.newProjectDivDispaly('hide');
-                    DOM.clearInputValue();
+                    DOM.clearInputValue(document.getElementById('new-project-name'));
+                    break;
                 case 'add-btn':
                     this.addNewProject();
+                    break;                   
             }
         }
     }
